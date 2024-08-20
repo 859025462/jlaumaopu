@@ -37,7 +37,7 @@
     <scroll-view class='f-column f-column-3' scroll-y='1'>
       <view class='padding-block'></view>
       <view wx:for='{{filters[filters_sub].category}}' wx:key='name' data-index='{{index}}'>
-        <view class='item {{item.all_active? "active": ""}}' bindtap='fClickCategory' data-index='{{index}}'>{{item.name}}</view>
+        <view class='item ' bindtap='fClickCategory' data-index='{{index}}'>{{item.name}}</view>
         <view wx:for='{{item.items}}' wx:key='name' wx:for-index='innerindex' wx:for-item='inneritem' class='item {{inneritem.active? "active": ""}}' bindtap='fClickSub' data-index="{{index}}" data-innerindex="{{innerindex}}">{{inneritem.name}}</view>
         <!-- 来一条分割线 -->
         <view wx:if='{{index != (filters[filters_sub].category.length - 1)}}' class='divider'></view>

@@ -69,7 +69,7 @@ async function checkAppSecret() {
   // 签名一个cos链接
   try {
     console.log("check signCosUrl");
-    const res = await cloud.signCosUrl("https://test-123456789.cos.ap-guangzhou.myqcloud.com/user/avatar/test.png");
+    const res = await cloud.signCosUrl("https://test-123456789.oss.laf.run/user/avatar/test.png");
     console.log("checksignCosUrl", res);
     if (!res) {
       addition.push(COS_ERR_MSG);

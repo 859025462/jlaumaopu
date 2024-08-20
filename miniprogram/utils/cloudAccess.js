@@ -31,11 +31,11 @@ function _getRegionBucketPath(url) {
   const firstItems = items[0].split('.');
 
   if (firstItems[0] !== 'cos') {
-    // 例如：https://bucket-name.cos.ap-guangzhou.myqcloud.com/sample.png
+    // 例如：https://bucket-name.oss.laf.run/sample.png
     return {region: firstItems[2], bucket: firstItems[0], filePath: items[1]}
   }
 
-  // 例如：https://cos.ap-guangzhou.myqcloud.com/bucket-name/sample.png
+  // 例如：https://oss.laf.run/bucket-name/sample.png
   const path = _splitOnce(items[1], '/');
   return {region: firstItems[1], bucket: path[0], filePath: path[1]}
 }
